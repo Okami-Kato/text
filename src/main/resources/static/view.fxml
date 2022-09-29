@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="604.0" prefWidth="430.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.epam.controller.FxController">
+    <children>
+<!--        <MenuBar>-->
+<!--            <menus>-->
+<!--                <Menu mnemonicParsing="false" text="File">-->
+<!--                    <items>-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#selectFile" text="Select file"/>-->
+<!--                        <MenuItem mnemonicParsing="false" onAction="#addNewWord" text="Add new word"/>-->
+<!--                    </items>-->
+<!--                </Menu>-->
+<!--            </menus>-->
+<!--        </MenuBar>-->
+        <TextField fx:id="searchView" prefHeight="26.0" prefWidth="241.0" promptText="Search word" />
+        <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="374.0" prefWidth="322.0">
+            <columns>
+                <TableColumn fx:id="word" prefWidth="155.20001828670502" text="word" />
+                <TableColumn fx:id="frequency" prefWidth="144.79998779296875" text="frequency" />
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#deleteWord" text="Delete word"/>
+                        <MenuItem mnemonicParsing="false" onAction="#editWord" text="Edit word"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="430.0">
+         <children>
+            <Button mnemonicParsing="false" text="Add Word" onAction="#addWord"/>
+         </children>
+      </HBox>
+    </children>
+</VBox>

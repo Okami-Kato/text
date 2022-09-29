@@ -1,0 +1,16 @@
+spring:
+  main:
+    web-application-type: none
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    url: jdbc:postgresql://localhost:5444/text_dict?reWriteBatchedInserts=true
+    username: root
+    password: root
+
+text:
+  file-paths:
+    - src/main/resources/data/text1.txt
+    - src/main/resources/data/text2.txt
+    - src/main/resources/data/text4.txt
+#    - src/main/resources/data/text3.txt
